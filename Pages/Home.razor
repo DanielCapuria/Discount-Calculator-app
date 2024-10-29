@@ -1,7 +1,7 @@
 ﻿@page "/"
 @using System.Globalization
 
-<PageTitle>Calculator</PageTitle>
+<PageTitle>Discount Calculator</PageTitle>
 
 <h1>Welcome to the Discount Calculator!</h1>
 <p>This application allows you to input the price of an item and the discount to get the price after discount!</p>
@@ -32,6 +32,6 @@
 
         var discountAmount = price * (discount / 100);
         var finalPrice = price - discountAmount;
-        result = $"Discount Amount off: ${discountAmount.ToString("F2", CultureInfo.InvariantCulture)}, Price after discount: ${finalPrice.ToString("F2", CultureInfo.InvariantCulture)}";
+        result = $"You Save: ${discountAmount.ToString("F2", CultureInfo.InvariantCulture)} | Price after discount: ${finalPrice.ToString("F2", CultureInfo.InvariantCulture)}";
     }
 }
