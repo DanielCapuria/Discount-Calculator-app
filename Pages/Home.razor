@@ -8,30 +8,32 @@
 
 <div>
     <label for="price">Original Price: $</label>
-    <input type="number" @bind="price" />
+    <input type="number" @bind-value="price" />
 </div>
 <div>
     <label for="discount">Discount Percentage: %</label>
-    <input type="number" @bind="discount" />
+    <input type="number" @bind-value="discount"  />
 </div>
 <button @onclick="DiscountCalculator">Calculate</button>
 <p>@result</p>
 
 @code {
-    private double price;
-    private double discount;
+    private double? price = null;
+    private double? discount = null;
     private string result = string.Empty; // Initialize to an empty string
 
     private void DiscountCalculator()
     {
-        if (price <= 0 || discount < 0)
+        if (price == null || discount == null || price <= 0 || discount < 0)
         {
             result = "Please enter valid numbers.";
             return;
         }
-
-        var discountAmount = price * (discount / 100);
-        var finalPrice = price - discountAmount;
-        result = $"You Save: ${discountAmount.ToString("F2", CultureInfo.InvariantCulture)} | Price after discount: ${finalPrice.ToString("F2", CultureInfo.InvariantCulture)}";
+        else {
+            var discountAmount = price.Value * (discount.Value / 100); var finalPrice = price.Value - discountAmount; 
+            result = $"You Save: ${discountAmount.ToString("F2", CultureInfo.InvariantCulture)} | Price after discount: ${finalPrice.ToString("F2", CultureInfo.InvariantCulture)}"; 
+        }
+            
+        
     }
 }

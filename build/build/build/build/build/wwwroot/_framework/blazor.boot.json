@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "DiscountPriceCalc",
   "resources": {
-    "hash": "sha256-INHGY+pLBDKynTA2i14Vq7vWndEJxnWhSwmb+A7P3Uc=",
+    "hash": "sha256-L93haDLJra/Wm6PGry2teTUoZt7afOtLjnSN64Whk84=",
     "jsModuleNative": {
       "dotnet.native.8.0.10.rzipiol42i.js": "sha256-QVxMlY7ohmjgde/bZMA0dlWDAeuUP+tEfkiSdg4DFcE="
     },
@@ -17,7 +17,7 @@
       "icudt_no_CJK.dat": "sha256-L7sV7NEYP37/Qr2FPCePo5cJqRgTXRwGHuwF5Q+0Nfs="
     },
     "assembly": {
-      "DiscountPriceCalc.wasm": "sha256-R5XMCJ/XIJJV211oeq4CUk4fx1ttsmo1wd0JqyTt/3A=",
+      "DiscountPriceCalc.wasm": "sha256-WRiHd73x7HwJjq5Sd7bj4BmvwSum+YkWOtPOViXN7e4=",
       "Microsoft.AspNetCore.Components.wasm": "sha256-fkvfPuhnU/q3HIsLQfuO0WGmpJTBSv2Gti3OV7mdEno=",
       "Microsoft.AspNetCore.Components.Web.wasm": "sha256-QfEtrkpquFvCm+ZXF0D0Cn3neNz6yJvHOnpckRSSuvs=",
       "Microsoft.AspNetCore.Components.WebAssembly.wasm": "sha256-3eOyO4ym/P4OFyhNf/04qtnuLbZdmqrUkiR7WpF8dh0=",
