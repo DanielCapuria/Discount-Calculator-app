@@ -1,0 +1,37 @@
+﻿@page "/"
+@using System.Globalization
+
+<PageTitle>Calculator</PageTitle>
+
+<h1>Welcome to the Discount Calculator!</h1>
+<p>This application allows you to input the price of an item and the discount to get the price after discount!</p>
+
+<div>
+    <label for="price">Original Price: $</label>
+    <input type="number" @bind="price" />
+</div>
+<div>
+    <label for="discount">Discount Percentage: %</label>
+    <input type="number" @bind="discount" />
+</div>
+<button @onclick="DiscountCalculator">Calculate</button>
+<p>@result</p>
+
+@code {
+    private double price;
+    private double discount;
+    private string result = string.Empty; // Initialize to an empty string
+
+    private void DiscountCalculator()
+    {
+        if (price <= 0 || discount < 0)
+        {
+            result = "Please enter valid numbers.";
+            return;
+        }
+
+        var discountAmount = price * (discount / 100);
+        var finalPrice = price - discountAmount;
+        result = $"Discount Amount off: ${discountAmount.ToString("F2", CultureInfo.InvariantCulture)}, Price after discount: ${finalPrice.ToString("F2", CultureInfo.InvariantCulture)}";
+    }
+}
